@@ -1,15 +1,14 @@
 import nltk
 from nltk.stem import WordNetLemmatizer
-
-lemmatizer = WordNetLemmatizer()
-import pickle
-import numpy as np
-
-from keras.models import load_model
-
-model = load_model('chatbot_model.h5')
 import json
 import random
+import pickle
+import numpy as np
+from keras.models import load_model
+from tkinter import *
+lemmatizer = WordNetLemmatizer()
+
+model = load_model('chatbot_model.h5')
 
 intents = json.loads(open('intents.json').read())
 words = pickle.load(open('words.pkl', 'rb'))
@@ -72,11 +71,7 @@ def chatbot_response(msg):
 
 
 # Creating GUI with tkinter
-import tkinter
-from tkinter import *
-
-
-def send():
+def send(event):
     msg = EntryBox.get("1.0", 'end-1c').strip()
     EntryBox.delete("0.0", END)
 
@@ -91,9 +86,8 @@ def send():
         ChatLog.config(state=DISABLED)
         ChatLog.yview(END)
 
-
 base = Tk()
-base.title("Hello")
+base.title("Chatbot")
 base.geometry("400x500")
 base.resizable(width=FALSE, height=FALSE)
 
@@ -113,7 +107,7 @@ SendButton = Button(base, font=("Verdana", 12, 'bold'), text="Send", width="12",
 
 # Create the box to enter message
 EntryBox = Text(base, bd=0, bg="white", width="29", height="5", font="Arial")
-# EntryBox.bind("<Return>", send)
+EntryBox.bind("<Return>", send)
 
 
 # Place all components on the screen
