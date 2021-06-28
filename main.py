@@ -133,3 +133,4 @@ EntryBox.place(x=6, y=401, height=90, width=265)
 SendButton.place(x=265, y=401, height=90,width=115)
 
 base.mainloop()
+
