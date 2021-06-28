@@ -70,7 +70,7 @@ def chatbot_response(msg):
     return res
 
 
-# Creating GUI with tkinter
+#Creating GUI with tkinter
 def send():
     msg = EntryBox.get("1.0", 'end-1c').strip()
     EntryBox.delete("0.0", END)
@@ -86,6 +86,7 @@ def send():
         ChatLog.config(state=DISABLED)
         ChatLog.yview(END)
 
+#Sending the message with the Enter key
 def send_withEnter(event):
     msg = EntryBox.get("1.0", 'end-1c').strip()
     EntryBox.delete("0.0", END)
