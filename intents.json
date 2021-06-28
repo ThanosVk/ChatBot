@@ -31,7 +31,7 @@
         },
         {"tag": "truth",
          "patterns": ["Can you provide me with knowledge?", "What is the key to success my exams?"],
-         "responses": ["Yeah, just copy tre link bellow \nhttps://bit.ly/3w0STKD","Maybe you should ask someone else"],
+         "responses": ["Yeah, just copy the link bellow \nhttps://bit.ly/3w0STKD","Maybe you should ask someone else"],
          "context": [""]
         },
         {"tag": "understand",
@@ -80,8 +80,8 @@
          "responses": ["That is an interesting question, can you prove that you are?","That is an difficult question, can you prove that you are?","That depends, can you prove that you are?"],
          "context": [""]
         },
-        {"tag": "SelfAware",
-         "patterns": ["Can you prove you are self-aware","Can you prove you are self aware","Can you prove you have a conscious","Can you prove you are self-aware please","Can you prove you are self aware please","Can you prove you have a conscious please","Prove you have a conscious"],
+        {"tag": "do",
+         "patterns": ["How are you?","What are you doing","Can you prove you have a conscious","Can you prove you are self-aware please","Can you prove you are self aware please","Can you prove you have a conscious please","Prove you have a conscious"],
          "responses": ["That is an interesting question, can you prove that you are?","That is an difficult question, can you prove that you are?","That depends, can you prove that you are?"],
          "context": [""]
         }
