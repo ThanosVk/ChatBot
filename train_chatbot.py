@@ -36,13 +36,6 @@ words = [lemmatizer.lemmatize(w.lower()) for w in words if w not in ignore_words
 words = sorted(list(set(words)))
 # sort classes
 classes = sorted(list(set(classes)))
-# documents = combination between patterns and intents
-#print (len(documents), "documents")
-# classes = intents
-#print (len(classes), "classes", classes)
-# words = all words, vocabulary
-#print (len(words), "unique lemmatized words", words)
-
 
 pickle.dump(words,open('words.pkl','wb'))
 pickle.dump(classes,open('classes.pkl','wb'))
@@ -92,7 +85,7 @@ model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy
 
 #fitting and saving the model 
 hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
-model.save(' model.h5', hist)
+model.save('model.h5', hist)
 
 print("model created")
 

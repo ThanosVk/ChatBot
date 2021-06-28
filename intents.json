@@ -5,7 +5,7 @@
          "context": [""]
         },
         {"tag": "goodbye",
-         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time","adios","see ya"],
          "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
          "context": [""]
         },
@@ -30,10 +30,61 @@
          "context": [""]
         },
         {"tag": "truth",
-         "patterns": ["Can you provide me with knowledge?", "What is the key to success my exams?", "?"],
-         "responses": ["Yeah, just copy tre link bellow \nhttps://bit.ly/3w0STKD","My creator didn't named me because they didn't knew about my gender","My creator had some ideas about calling me XLog*(Xelogiastra) or PL^2GS(Polulogas)"],
+         "patterns": ["Can you provide me with knowledge?", "What is the key to success my exams?"],
+         "responses": ["Yeah, just copy tre link bellow \nhttps://bit.ly/3w0STKD","Maybe you should ask someone else"],
+         "context": [""]
+        },
+        {"tag": "understand",
+         "patterns": ["Do you understand what I am saying","Do you understand me","Do you know what I am saying","Do you get me", "Comprendo", "Know what I mean"],
+         "responses": ["Well I would not be a very clever AI if I did not would I?","I read you loud and clear!","I do indeed!"],
+         "context": [""]
+        },
+        {"tag": "whoami",
+         "patterns": ["Can you see me?","Do you see me?","Can you see anyone in the camera?","Do you see anyone in the camera?","Identify me","Who am I please"],
+         "responses": ["Let me see","Look at the camera"],
+         "context": [""]
+        },
+        {"tag": "jokes",
+         "patterns": ["Tell me a joke","Do you know any jokes","How about a joke","Give me a joke","Make me laugh","I need cheering up"],
+         "responses": ["So I said 'Do you want a game of Darts?' He said, 'OK then', I said nearest to bull starts'. He said, 'Baa', I said, 'Moo', he said, You're closest'.  ",
+                        "So I went down the local supermarket, I said, 'I want to make a complaint, this vinegar's got lumps in it', he said, 'Those are pickled onions'.  ",
+                        "I saw this bloke chatting up a cheetah; I thought, 'He's trying to pull a fast one'.  ",
+                        "So I said to this train driver 'I want to go to Paris'. He said 'Eurostar?' I said, 'I've been on telly but I'm no Dean Martin'.  ",
+                        "I said to the Gym instructor 'Can you teach me to do the splits?' He said, 'How flexible are you?' I said, 'I can't make Tuesdays'.  ",
+                        "But I'll tell you what I love doing more than anything: trying to pack myself in a small suitcase. I can hardly contain myself.  ",
+                        "I went to the Chinese restaurant and this duck came up to me with a red rose and says 'Your eyes sparkle like diamonds'. I said, 'Waiter, I asked for a-ROMATIC duck'.  ",
+                        "So this bloke says to me, 'Can I come in your house and talk about your carpets?' I thought, 'That's all I need, a Je-hoover's witness'.  ",
+                        "I rang up British Telecom, I said, 'I want to report a nuisance caller', he said 'Not you again'.  ",
+                        "I was having dinner with a world chess champion and there was a check tablecloth. It took him two hours to pass me the salt.  ",
+                        "He said, 'You remind me of a pepper-pot', I said 'I'll take that as a condiment'.  ",
+                        "I was in the supermarket and I saw this man and woman wrapped in a barcode. I said, 'Are you two an item?'  ",
+                        "A lorry-load of tortoises crashed into a trainload of terrapins, I thought, 'That's a turtle disaster'.  ",
+                        "Four fonts walk into a bar the barman says 'Oi - get out! We don't want your type in here'  ",
+                        "A three-legged dog walks into a saloon in the Old West. He slides up to the bar and announces: 'I'm looking for the man who shot my paw.'  ",
+                        "Two antennas meet on a roof, fall in love and get married. The ceremony wasn't much, but the reception was excellent.",
+                        "Two hydrogen atoms walk into a bar. One says, 'I've lost my electron.' The other says, 'Are you sure?' The first replies, 'Yes, I'm positive...'",
+                        "A jumper cable walks into a bar. The bartender says,  'I'll serve you but don't start anything.'",
+                        "A sandwich walks into a bar. The bartender  says, 'Sorry we don't serve food in here.'",
+                        "A man walks into a bar with a slab of asphalt under his arm and says: 'A beer please, and one for the road.'",
+                        "Two cannibals are eating a clown. One says to  the other: 'Does this taste funny to you?'",
+                        "'Doc, I can't stop singing 'The Green, Green Grass of Home.'' 'That sounds like Tom Jones Syndrome.' 'Is it common?' 'It's Not Unusual.'",
+                        "An invisible man marries an invisible woman. The kids were nothing to look at either.",
+                        "I went to buy some camouflage trousers the other day but I couldn't find any.",
+                        "A man goes into a bar and says, 'Can I have a bottle of less?' 'What's that?', asks the barman, 'Is it the name of a beer?' 'I don't know', replies the man, 'but my doctor says I have to drink it.'",
+                         "A grizzly bear walks into a pub and says, 'Can I have a pint of lager..............................................................................................................................and a packet of crisps please.' To which the barman replies, 'Why the big paws?'",
+                        "What do you call cheese that isn't yours?  Nacho cheese."],
+         "context": [""]
+        },
+        {"tag": "SelfAware",
+         "patterns": ["Can you prove you are self-aware","Can you prove you are self aware","Can you prove you have a conscious","Can you prove you are self-aware please","Can you prove you are self aware please","Can you prove you have a conscious please","Prove you have a conscious"],
+         "responses": ["That is an interesting question, can you prove that you are?","That is an difficult question, can you prove that you are?","That depends, can you prove that you are?"],
+         "context": [""]
+        },
+        {"tag": "SelfAware",
+         "patterns": ["Can you prove you are self-aware","Can you prove you are self aware","Can you prove you have a conscious","Can you prove you are self-aware please","Can you prove you are self aware please","Can you prove you have a conscious please","Prove you have a conscious"],
+         "responses": ["That is an interesting question, can you prove that you are?","That is an difficult question, can you prove that you are?","That depends, can you prove that you are?"],
          "context": [""]
         }
-   ]
+]
 }
 

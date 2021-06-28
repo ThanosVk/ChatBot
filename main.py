@@ -132,5 +132,30 @@ ChatLog.place(x=6, y=6, height=386, width=370)
 EntryBox.place(x=6, y=401, height=90, width=265)
 SendButton.place(x=265, y=401, height=90,width=115)
 
+
+def about_window():
+    top=Toplevel()
+    top.title("About")
+    top.geometry("350x150")
+    label = Label(top, text="This is a ChatBot created\n for the semester project.\n\nAuthors: Thanassis Vakouftsis,Alexandra Tsarouchi\nCopyright© 2021\n\n")
+    label.pack()
+    btn = Button(top,text="Close window",command=top.destroy).pack()
+
+def exit():
+    top=Toplevel()
+    top.title("Exit")
+    top.geometry("350x150")
+    label = Label(top, text="Are you sure you want to close the Chatbot?\n\n")
+    label.pack()
+    btn = Button(top, text="Yes", command=base.quit).pack(side=LEFT,padx=65)
+    btn2 = Button(top,text="No",command=top.destroy).pack(side=RIGHT,padx=65)
+
+#Menu Components
+menubar = Menu(base)
+filemenu = Menu(menubar, tearoff=0)
+menubar.add_cascade(label="About", command=about_window)
+menubar.add_cascade(label="Exit",command=exit)
+
+base.config(menu=menubar)
 base.mainloop()
 
