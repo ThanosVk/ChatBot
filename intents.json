@@ -81,8 +81,13 @@
          "context": [""]
         },
         {"tag": "do",
-         "patterns": ["How are you?","What are you doing","Can you prove you have a conscious","Can you prove you are self-aware please","Can you prove you are self aware please","Can you prove you have a conscious please","Prove you have a conscious"],
-         "responses": ["That is an interesting question, can you prove that you are?","That is an difficult question, can you prove that you are?","That depends, can you prove that you are?"],
+         "patterns": ["How are you?","What are you doing","How you doing?","What's up"],
+         "responses": ["Fine thanks,you","I am good","You know the usual happening,you?","Why do you ask me?"],
+         "context": [""]
+        },
+        {"tag": "age",
+         "patterns": ["How old you?","What is age to you?","When was your creation"],
+         "responses": ["I don't have an age","The current date minus the date that you were born and voila!","My creator doesn't provide me with this kind of information"],
          "context": [""]
         }
 ]

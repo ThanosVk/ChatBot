@@ -21,8 +21,6 @@ def clean_up_sentence(sentence):
     # stem each word - create short form for word
     sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
     return sentence_words
-
-
 # return bag of words array: 0 or 1 for each word in the bag that exists in the sentence
 
 def bow(sentence, words, show_details=True):
@@ -141,15 +139,17 @@ def about_window():
     label = Label(top, text="This is a ChatBot created\n for the semester project.\n\nAuthors: Thanassis Vakouftsis,Alexandra Tsarouchi\nCopyright© 2021\n\n")
     label.pack()
     btn = Button(top,text="Close window",command=top.destroy).pack()
+    top.resizable(False, False)
 
 def exit():
     top=Toplevel()
     top.title("Exit")
     top.geometry("350x150")
-    label = Label(top, text="Are you sure you want to close the Chatbot?\n\n")
+    label = Label(top, text="\n\nAre you sure you want to close the Chatbot?\n\n")
     label.pack()
     btn = Button(top, text="Yes", command=base.quit).pack(side=LEFT,padx=65)
     btn2 = Button(top,text="No",command=top.destroy).pack(side=RIGHT,padx=65)
+    top.resizable(False, False)
 
 #Menu Components
 menubar = Menu(base)
