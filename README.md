@@ -8,7 +8,7 @@ We used a  recurrent neural network (RNN) to classify which category the user's 
 
 **The dataset**
 
-We created then ‘intents.json’. It is a JSON file that contains the patterns we need to find, and the responses we want to return to a user's question.
+We created the ‘intents.json’. It is a JSON file that contains the patterns we need to find, and the responses we want to return to a user's question.
 
 **project files**
 
@@ -23,3 +23,5 @@ We created then ‘intents.json’. It is a JSON file that contains the patterns
     model.h5 – This is the trained model.
 
     main.py – This is the Python script in which we developed a GUI for our chatbot. Users are able to interact with the bot.
+    
+    requirements.txt - This is a text file which contains the prerequisites packages
