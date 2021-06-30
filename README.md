@@ -10,7 +10,7 @@ We used a  recurrent neural network (RNN) to classify which category the user's 
 
 We created the ‘intents.json’. It is a JSON file that contains the patterns we need to find, and the responses we want to return to a user's question.
 
-**project files**
+**Project files**
 
     Intents.json – The data file which has predefined patterns and responses
 
