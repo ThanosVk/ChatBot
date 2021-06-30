@@ -34,7 +34,7 @@ def bow(sentence, words, show_details=True):
                 # assign 1 if current word is in the vocabulary position
                 bag[i] = 1
                 if show_details:
-                    print("found in bag: %s" % w)
+                    print("Found in bag: %s" % w)
     return (np.array(bag))
 
 

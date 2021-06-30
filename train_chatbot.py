@@ -12,6 +12,8 @@ from keras.optimizers import SGD
 import random
 import warnings
 warnings.filterwarnings("ignore", category=np.VisibleDeprecationWarning)
+import pandas as pd
+import matplotlib.pyplot as plt
 
 words=[]
 classes = []
@@ -83,12 +85,11 @@ print(np.array(x_train).shape,np.array(y_train).shape,np.array(x_test).shape,np.
 #Create model - 3 layers. First layer 128 neurons, second layer 64 neurons and 3rd output layer contains number of neurons
 #Equal to number of intents to predict output intent with softmax
 model = Sequential()
-model.add(Dense(128, input_shape=(len(train_x[0]),), activation='relu'))
+model.add(Dense(80, input_shape=(len(train_x[0]),), activation='relu'))
 model.add(Dropout(0.5))
-model.add(Dense(64, activation='relu'))
+model.add(Dense(40, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(len(train_y[0]), activation='softmax'))
-print(len(train_y[0]))
 
 #Compile model.Stochastic gradient descent with Nesterov the best possible results
 sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
@@ -98,14 +99,11 @@ model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy
 hist = model.fit(x_train, y_train, epochs=200, batch_size=5, verbose=1,validation_data = (x_test, y_test))
 model.save('model.h5', hist)
 
-print("model created")
+print("Model created")
 
 test_results = model.evaluate(x_test,y_test, verbose=False)
 print(f'Test results - Loss: {test_results[0]} - Accuracy: {100*test_results[1]}%')
 
-import pandas as pd
-import matplotlib.pyplot as plt
-odel_loss = pd.DataFrame(hist.history)
 plt.subplot(1,2,1)
 plt.plot(hist.history['loss'],label="Loss",c='g')
 plt.plot(hist.history['val_loss'],label="Validation Loss",c='c')
