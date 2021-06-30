@@ -1,7 +1,7 @@
 {"intents": [
         {"tag": "greeting",
          "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
-         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+         "responses": ["Hello, what do you want to know?", "Good to see you again, what would you like to know?", "Hi there, how can I help?"],
          "context": [""]
         },
         {"tag": "goodbye",
@@ -16,16 +16,16 @@
         },
         {"tag": "noanswer",
          "patterns": [],
-         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand","Did you say anything"],
+         "responses": ["Sorry, I can't understand you", "Please give me more info", "Not sure I understand","Did you say anything"],
          "context": [""]
         },
         {"tag": "options",
-         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
-         "responses": ["I can guide you through the knowledge i have", "I can supply you with the best memes across the internet","Ask me whatever you want, i am here to help"],
+         "patterns": ["How could you help me?", "What can you do?", "What help do you provide?", "How can you be helpful?", "What support is offered"],
+         "responses": ["I can guide you through the knowledge I have", "I can supply you with the best memes across the internet","Ask me whatever you want, I am here to help"],
          "context": [""]
         },
         {"tag": "name",
-         "patterns": ["What is your name?", "How can i call you?", "Do you have a name?"],
+         "patterns": ["What is your name?", "How can I call you?", "Do you have a name?"],
          "responses": ["I don't have a particular name, but you can call me Chatbot","My creator didn't named me because they didn't knew about my gender","My creator had some ideas about calling me XLog*(Xelogiastra) or PL^2GS(Polulogas)"],
          "context": [""]
         },
@@ -36,7 +36,7 @@
         },
         {"tag": "understand",
          "patterns": ["Do you understand what I am saying","Do you understand me","Do you know what I am saying","Do you get me", "Comprendo", "Know what I mean"],
-         "responses": ["Well I would not be a very clever AI if I did not would I?","I read you loud and clear!","I do indeed!"],
+         "responses": ["Well I would not be a very clever AI if I did not, would I?","I read you loud and clear!","I do indeed!"],
          "context": [""]
         },
         {"tag": "whoami",
@@ -82,11 +82,11 @@
         },
         {"tag": "do",
          "patterns": ["How are you?","What are you doing","How you doing?","What's up"],
-         "responses": ["Fine thanks,you","I am good","You know the usual happening,you?","Why do you ask me?"],
+         "responses": ["Fine thanks,you?","I am good","You know the usual happening,you?","Why do you ask me?"],
          "context": [""]
         },
         {"tag": "age",
-         "patterns": ["How old you?","What is age to you?","When was your creation"],
+         "patterns": ["How old are you?","What is age to you?","When was your creation"],
          "responses": ["I don't have an age","The current date minus the date that you were born and voila!","My creator doesn't provide me with this kind of information"],
          "context": [""]
         }
