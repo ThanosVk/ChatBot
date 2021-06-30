@@ -12,7 +12,6 @@ from keras.optimizers import SGD
 import random
 import warnings
 warnings.filterwarnings("ignore", category=np.VisibleDeprecationWarning)
-import pandas as pd
 import matplotlib.pyplot as plt
 
 words=[]
@@ -74,7 +73,7 @@ for doc in documents:
 random.shuffle(training)
 training = np.array(training)
 
-#Create train and test lists. X - patterns, Y - intents
+#Create train lists. X - patterns, Y - intents
 train_x = list(training[:,0])
 train_y = list(training[:,1])
 x_train, x_test, y_train, y_test = train_test_split(train_x,train_y,test_size=0.1,random_state=5)
@@ -91,7 +90,7 @@ model.add(Dense(40, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(len(train_y[0]), activation='softmax'))
 
-#Compile model.Stochastic gradient descent with Nesterov the best possible results
+#Compile model with Stochastic gradient descent with Nesterov the best possible results
 sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
