@@ -69,6 +69,7 @@ def chatbot_response(msg):
 
 
 #Creating GUI with tkinter
+#Send function to send the messages of the user to ChatBot
 def send():
     msg = EntryBox.get("1.0", 'end-1c').strip()
     EntryBox.delete("0.0", END)
@@ -100,38 +101,39 @@ def send_withEnter(event):
         ChatLog.config(state=DISABLED)
         ChatLog.yview(END)
 
+#Creation of the basic window
 base = Tk()
 base.title("Chatbot")
 base.geometry("400x500")
 base.resizable(width=FALSE, height=FALSE)
 
-# Create Chat window
+#Create chat area
 ChatLog = Text(base, bd=0, bg="white", height="8", width="50", font="Arial", )
 
 ChatLog.config(state=DISABLED)
 
-# Bind scrollbar to Chat window
+#Bind scrollbar to Chat window
 scrollbar = Scrollbar(base, command=ChatLog.yview, cursor="heart")
 ChatLog['yscrollcommand'] = scrollbar.set
 
 photo = PhotoImage(file = r"send.png")
-# Create Button to send message
+#Create Button to send message
 SendButton = Button(base, font=("Verdana", 12, 'bold'), image=photo, width="12", height=5,
                     bd=0, bg="#32c7de", activebackground="#3c9d9b", fg='#ffffff',
                     command=send)
 
-# Create the box to enter message
+#Create the box to enter message
 EntryBox = Text(base, bd=0, bg="white", width="29", height="5", font="Arial")
 EntryBox.bind("<Return>", send_withEnter)
 
 
-# Place all components on the screen
+#Place all components on the screen
 scrollbar.place(x=376, y=6, height=386)
 ChatLog.place(x=6, y=6, height=386, width=370)
 EntryBox.place(x=6, y=401, height=90, width=265)
 SendButton.place(x=265, y=401, height=90,width=115)
 
-
+#Creation of secondary window for displaying information
 def about_window():
     top=Toplevel()
     top.title("About")
@@ -140,7 +142,7 @@ def about_window():
     label.pack()
     btn = Button(top,text="Close window",command=top.destroy).pack()
     top.resizable(False, False)
-
+#Creation of window for exiting the ChatBot
 def exit():
     top=Toplevel()
     top.title("Exit")
