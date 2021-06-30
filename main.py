@@ -159,4 +159,3 @@ menubar.add_cascade(label="Exit",command=exit)
 
 base.config(menu=menubar)
 base.mainloop()
-
