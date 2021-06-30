@@ -124,7 +124,6 @@ SendButton = Button(base, font=("Verdana", 12, 'bold'), image=photo, width="12",
 EntryBox = Text(base, bd=0, bg="white", width="29", height="5", font="Arial")
 EntryBox.bind("<Return>", send_withEnter)
 
-
 # Place all components on the screen
 scrollbar.place(x=376, y=6, height=386)
 ChatLog.place(x=6, y=6, height=386, width=370)
